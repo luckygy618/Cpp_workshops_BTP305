@@ -1,0 +1,18 @@
+
+/*
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+compiled by  /usr/local/gcc/9.1.0/bin/g++ -Wall -std=c++17 -g -o ws
+Name: GuoYu Cao
+Student ID: 061341145
+Email: gcao4@myseneca.ca
+Date: 2020-11-28
+*/
+
+In this workshop, I learn a lot about multithreading and editing files.
+In the "void SecureData::code(char key)" function, I bind the function "converter" with its parameters together in "auto bind_convert = std::bind(converter, text, key, nbytes, Cryptor());". 
+
+Then I created 2 threads. One thread is "std::thread t1(bind_convert, "t1");" to run the converter function, and another one is "std::thread t2([&]() {encoded = !encoded;});" to set the encoded to opposite value. Then I add t1.join() and t2.join() and the end to returns these 2 thread after they completed. 
+
+In the backup function, I use an ofstream newFile(file, std::ios::binary); to open the file in binary mode. I found that I have to use ofstream for write and ifstream for read. I tried to just use fstream but it failed to open the file. If the file is not opened correctly, I throw ("Cannot open file for backup!!!!!!!") to throw an exception and catche this exception by "catch (const char* err) {std::cout << err << std::endl;}".
+
+The restore function is similar to the backup function. I used an ifstream to hold the file and then used a "while loop" with "getline(newFile, str);" inside it to read from the file and store the text in a "std::string str". 

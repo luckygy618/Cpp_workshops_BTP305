@@ -1,0 +1,27 @@
+/*
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+compiled by  /usr/local/gcc/9.1.0/bin/g++ -Wall -std=c++17 -g -o ws
+Name: GuoYu Cao
+Student ID: 061341145
+Email: gcao4@myseneca.ca
+Date: 2020-10-23
+*/
+
+
+
+
+In this workshop, I learned how to use lambda, functor, and how to handle the exceptions. I also practiced a lot of trimming the strings to eliminate the whitespace and commas. 
+
+After doing this workshop, I found functor makes more sense to me. When I need to capture and edit some variables in small encapsulation scopes, I prefer to use lambda because it is simply to write and works effectively. But, if I need something in a large range, I need to use normal functions or functor. The functor is a kind of function that has an overloaded operator (). So, it could be seen as a function. If I used lambda, and then I pass my code to other people, they have to read the entire scope to find out what things would be captured by the lambda. It will increase more difficulties to other co-workers.
+
+I practiced how to handle exceptions a lot in this workshop. Like in the SpellChecker, when the filename is not found, the file.open() will fail. And I cannot get any information to initialize the objects. I tried to use try and then catch(...){cout<<"not open";} to catch this exception, but it does not throw automatically. So that the object cannot initialize by reading the file but it has to be initialized with my default values that make everything to be empty. To solve this issue, I manually added "throw "Bad file name!";". I checked the "loadfile.is_open() == true", and when the open() failed, I throw the error  message and then use catch (const char* err) {std::cout << err << std::endl;} to catch it. Then I added an if statement to operator() function body, to make sure it does not compare the bad words and good words when the object is empty. Then my code works fine.
+
+The string trimming parts of Movie and Book are pretty the same, so I created a function to hold this code. And Movie and Book only need to call the trim function rather than duplicate the similar codes.
+
+I tried to remove the default constructor of Movie and Book. Although the default constructors only set the objects to empty, it has to be there. If I deleted the default constructors, it creates compiling errors and makes me cannot even build the project.  So there has to be default constructors. 
+
+During this workshop, I found the most difficult part is not coding. Coding is only difficult when I do not know the detailed syntax. But as long as I saw some samples, I know how to write the code correctly. 
+
+The difficult parts are the requirement's description and the Visual Studio debugging error message. The requirement is very confusing. There is a sentence like "if an observer has been registered...", it is very confusing when using "registered" to describe the observer. I stuck so long to figure out what the "registered" implies and finally I found it just simply means when the observer is not null and pointing to something. 
+Overall, I think this workshop is a good practice for me. 
+		

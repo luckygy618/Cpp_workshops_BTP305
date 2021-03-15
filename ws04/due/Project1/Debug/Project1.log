@@ -1,0 +1,4 @@
+﻿  Restaurant.cpp
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws04\due\Project1\Restaurant.cpp(46,26): warning C4101: 'e': unreferenced local variable
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws04\due\Project1\Restaurant.cpp(49): warning C4715: 'sdds::Restaurant::operator=': not all control paths return a value
+  Project1.vcxproj -> C:\Users\lucky\Desktop\Semester 3\BTP305\ws04\due\Project1\Debug\Project1.exe

@@ -1,0 +1,17 @@
+// Name: GuoYu Cao
+// Seneca Student ID: 061341145
+// Seneca email: gcao4@myseneca.ca
+// Date of completion: 2020-11-20
+//
+// I confirm that I am the only author of this file
+//   and the content was created entirely by me.
+
+In this milestone, I learn a lot.
+I practiced the STL algorithms functions and STL containers a lot.
+I got stuck by 2 errors for a long time. One is in the Workstation::getIfCompleted(CustomerOrder& order) function, I should check if the entire order is completed. But at the beginning, I forgot I have isOrderFilled() function to check the filled status already. 
+
+Another error is in the fillItem() function. At the beginning, I just check if I could find the item that needs to be filled by getItemName(), and as long as I found 1 item, I filled it and return true. However, in the AssemblyLine, there some orders need to fill multiple GPU and Monitor. So that I missed the repeated items. And finally, I found this error and I added an array to hold all the items I found in the fillItem() function, and then fill the items in a for loop. So that I do not have missing items anymore. 
+
+I learned how to handle a production sequence in this workshop. I use a pointer to point to next workstation in the Assembly line container, and link all the workstations to their next workstations by this pointer. So that when I could know every workstation's next prodedure unless it is the last workstation which has a nullpyr of the NextStation pointer.
+
+I also realize that when the code becomes more and more, and more pointers are used, it is harder to debug. Sometimes, I need to track the code many times to find out what the pointer is pointing to. Maybe in the future, I need to try to simplify my code's structure to make it more readable and efficient.   

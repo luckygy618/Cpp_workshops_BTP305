@@ -1,0 +1,18 @@
+/*
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+compiled by  /usr/local/gcc/9.1.0/bin/g++ -Wall -std=c++17 -g -o ws
+Name: GuoYu Cao
+Student ID: 061341145
+Email: gcao4@myseneca.ca
+Date: 2020-10-30
+*/
+
+
+
+In this workshop, I practiced a lot about vector, list, exception handle and how to create objects base on reading files. 
+
+I used a vector to hold the pointers of vehicle: "std::vector<Vehicle*> m_vehicles;". And I used a destructor with "std::vector<Vehicle*>::iterator i " to loop through the vector and delete every object inside it. This is because I need to deallocate dynamic memory. Each element inside the vector is a Vehicle pointer that pointing to a car or racecar that created by "new_vehicl = new Car(ss);" and "new_vehicl = new Racecar(ss);" in the "Vehicle* createInstance(std::istream& in) " function and append into the vector by the overload "+=".  So, if I do not destroy these dynamically allocated cars and racecars, there will be a memory leak. 
+
+In the function loadData(), it read the data from the file and pass the file to sdds::Vehicle* aVehicle = sdds::createInstance(file); to create the Vehicle base on the data and then append the Vehicle to the Autoshop vector. So, if the data is invalid, such as the wrong tag, wrong speed,and wrong condition, it will cause exceptions. I used "try{}" to cover the creation and appending steps and catch the different types of exceptions. Inside the createInstance, I checked if the tag is correct. If the tag is wrong, I used "std::string err = "Unrecognized record type: [" + strarray[0] + "]";" and then I throw it "throw (err);". Then, the exception will be caught by the ty{}, catch in the main function. In the Car's constructor, I used "	throw ("Invalid record!")" when the top speed and condition are invalid. And these exceptions will be caught in the main function. Another solution is to use try and catch inside the createInstance, and check the input data in the createInstance and then throw the exception when data is invalid. So that it can handle the exception inside itself and do not need to catch the exceptions in the main function. 
+
+I used a vector and list to store Vehicle pointers. The list does not support [] and at(int) to randomly access the members inside the list. I think I can use vector and list to store the Vehicle object instead of Vehicle pointers. However, I will use pointers as long as I can. This is because if I store Vehicle objects in the vector and list, then when I need to add and delete and resize the container, it will take super large memory and a super long time compared with the pointers. If I only store the pointers, I can manipulate the pointers very efficiently and do not need to consume super large memory. Because only the pointers are inside my container, so no matter how large the Vehicle object is, and no matter how many Vehicles I stored, I only consumed the memory for the pointers so that it will not lower down my performance. 

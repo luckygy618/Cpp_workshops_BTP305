@@ -1,0 +1,4 @@
+C:\Users\lucky\Desktop\Semester 3\BTP305\WS03\ws03\Debug\ws03.exe
+C:\Users\lucky\Desktop\Semester 3\BTP305\WS03\ws03\Debug\ws03.pdb
+C:\Users\lucky\OneDrive\桌面\Semester 3\BTP305\WS03\ws03\Debug\ws03.exe
+C:\Users\lucky\OneDrive\桌面\Semester 3\BTP305\WS03\ws03\Debug\ws03.pdb

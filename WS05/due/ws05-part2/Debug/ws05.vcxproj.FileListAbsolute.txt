@@ -1,0 +1,4 @@
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws05\WS05\due\ws05\Debug\ws05.exe
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws05\WS05\due\ws05\Debug\ws05.pdb
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws05\WS05\due\ws05-part2\Debug\ws05.exe
+C:\Users\lucky\Desktop\Semester 3\BTP305\ws05\WS05\due\ws05-part2\Debug\ws05.pdb
